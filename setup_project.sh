@@ -5,7 +5,7 @@
 read -p "Enter project/directory name: " input
 project_dir="attendance_tracker_$input"
 
-# 2. code that Signal Trap to archive and purge if interrupted (Ctrl+C) 
+# 2. code that Signal Trap to archive and purge if interrupted (Ctrl+C/ SIGINT) 
 
 # explanation for -czf : -c stands for create,-z stands for Gzip to compress file, -f tells the system the next word typed is the name of the file.
 
@@ -21,7 +21,7 @@ trap cleanup SIGINT
 
 mkdir -p "$project_dir/Helpers" "$project_dir/reports"
 
-# 4.codes that  Move pulled Source files into their respective subdirectories as shown by the directory  structure tree.
+# 4.codes to move pulled source  files into their respective subdirectories as shown by the directory  structure tree.
 
 # This codes function well if  files are in the same folder as the script
 
